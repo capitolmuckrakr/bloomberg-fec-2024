@@ -1,7 +1,7 @@
 # fec
 
 ## About
-This app allows for importing and searching expenditures, independent expenditures and contributions from electronic FEC filings. It was forked from an app developed by the New York Times. It relies on a forked version of the NYT's [fec2json](https://github.com/capitolmuckrakr/fec2json) library.
+This app allows for importing and searching expenditures, independent expenditures and contributions from electronic FEC filings. It was forked from an app developed by the New York Times but has been extensively modified (so blame me for any errors). It relies on a forked version of the NYT's [fec2json](https://github.com/capitolmuckrakr/fec2json) library.
 
 #### Why not just use the FEC website? 
 The FEC website has been substantially improved recently, but it still lacks several main features we desire.
@@ -30,3 +30,4 @@ If you don't *really* need to deploy and maintain your own standalone campaign f
 1. `add2virtualenv . && add2virtualenv config && add2virtualenv fec`
 1. `django-admin migrate`
 
+More detailed setup instructions are contained in the [user guide repository](https://github.com/capitolmuckrakr/bloomberg-fec-docs-24/tree/main)

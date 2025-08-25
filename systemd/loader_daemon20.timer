@@ -1,0 +1,13 @@
+#/etc/systemd/system/loader_daemon.timer
+[Unit]
+Description=Run loader_daemon every hour
+Requires=loader_daemon20.service
+
+[Timer]
+Unit=loader_daemon20.service
+OnUnitInactiveSec=1h
+AccuracySec=1s
+
+[Install]
+WantedBy=timers.target
+

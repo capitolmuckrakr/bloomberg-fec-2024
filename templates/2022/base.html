@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+
+ <div class="navbar navbar-default navbar-primary">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="logo-links__bloomberg"></div>
+          
+          <a class="navbar-brand" href="/2022">FEC 2022</span></a>
+        </div>
+         <ul class="nav navbar-nav navbar-right navbar-bits">
+          <li><a href="{%url '2022:summary'%}">Summaries</a></li>
+          <li><a href="{%url '2022:contributions'%}">Receipts</a></li>
+          <li><a href="{%url '2022:expenditures'%}">Expenditures</a></li>
+          <li><a href="{%url '2022:ies'%}">IEs</a></li>
+          <li><a href="{%url '2022:races'%}">Races</a></li>
+          <li><a href="{%url '2022:candidates'%}">Candidates</a></li>
+	  <li><a href="http://indgdatadesk.com/docs/">Help</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+<div id="content" class="container">
+      {% block content %}{% endblock %}
+</div>
+
+{% endblock %}

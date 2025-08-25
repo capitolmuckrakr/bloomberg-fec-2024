@@ -1,0 +1,22 @@
+#/etc/systemd/system/loader_daemon.service
+[Unit]
+Description=FEC 2022 filings loader daemon
+Wants=loader_daemon22.timer
+After=network.target
+
+[Service]
+User=loader_daemon_service
+Type=notify
+WorkingDirectory=/home/ubuntu/scripts/bloomberg-fec
+Environment=PYTHONUNBUFFERED=1
+Environment=DJANGO_SETTINGS_MODULE=config.dev.settings
+Environment=LOGLEVEL=INFO
+Environment=SYSLOG_IDENTIFIER=filings_loader22
+#Environment=STARTDATE=''
+#Environment=ENDDATE=''
+ExecStart=+/home/ubuntu/.virtualenvs/fec/bin/django-admin  \
+          loaderdaemon_2022
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

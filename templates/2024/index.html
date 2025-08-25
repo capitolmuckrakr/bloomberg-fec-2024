@@ -1,0 +1,19 @@
+{% extends '2024/base.html' %}
+{% load humanize %}
+
+
+{% block content %}
+
+<h2> 2024 campaign finance </h2>
+
+<p> <a href="{%url '2024:summary'%}">Summaries</a> </p>
+<p> <a href="{%url '2024:contributions'%}">Contributions</a> </p>
+<p> <a href="{%url '2024:expenditures'%}">Expenditures</a> </p>
+<p> <a href="{%url '2024:ies'%}">Independent Expenditures</a> </p>
+<p> <a href="{%url '2024:races'%}">Races</a> </p>
+<p> <a href="{%url '2024:candidates'%}">Candidates</a> </p>
+<p> <a href="{%url '2024:top_donors'%}">Top Donors</a> </p>
+
+<h3> Admin </h3>
+<p> <a href="{% url '2024:filing_status' 'failed'%}">Filings that failed to import</a></p>
+{% endblock %}
